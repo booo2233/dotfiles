@@ -2,7 +2,7 @@ export PATH=$PATH:/media/linux_drvie/pip-env/bin
 export PATH=$PATH:~/.pyenv/versions/3.13t-dev/bin 
 export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
 alias vim=/bin/nvim
-alias ffmpeg=/bin/ffmpeg
+#alias ffmpeg=/bin/ffmpeg
 alias htop=btop
 alias cat="bat --color=always"
 figlet -ctf  ANSIShadow "hello" | lolcat
@@ -20,7 +20,7 @@ alias neofetch='fastfetch'
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
+eval "$(zoxide init zsh)"
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
