@@ -4,7 +4,8 @@ export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f
 alias vim=/bin/nvim
 #alias ffmpeg=/bin/ffmpeg
 alias htop=btop
-alias cat="bat --color=always"
+alias ls="eza --icons"
+alias cat="bat"
 figlet -ctf  ANSIShadow "hello" | lolcat
 alias apt="sudo nala"
 alias code=codium
@@ -22,9 +23,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 
 # now load zsh-syntax-highlighting plugin
@@ -130,8 +131,8 @@ alias vim=/bin/nvim
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+#u source ~/powerlevel10k/powerlevel10k.zsh-theme
+#u source ~/powerlevel10k/powerlevel10k.zsh-theme
 # Load zsh-autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -151,11 +152,10 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 # ~/.zshrc
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH=$HOME/.local/bin:$PATH
-
+eval "$(starship init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
