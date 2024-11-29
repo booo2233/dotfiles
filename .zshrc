@@ -4,7 +4,7 @@ export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f
 alias vim=/bin/nvim
 #alias ffmpeg=/bin/ffmpeg
 alias htop=btop
-alias ls="eza --icons"
+alias ls="lsd"
 alias cat="bat"
 figlet -ctf  ANSIShadow "hello" | lolcat
 alias apt="sudo nala"
@@ -152,6 +152,8 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 # ~/.zshrc
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH=$HOME/.local/bin:$PATH

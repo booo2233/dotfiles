@@ -1,3 +1,4 @@
 .tmux/plugins/tmux-sensible/
 .tmux/plugins/tmux/
 .tmux/plugins/tpm/
+.tmux/plugins/tmux-fzf
