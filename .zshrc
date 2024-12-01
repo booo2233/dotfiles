@@ -4,8 +4,9 @@ export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f
 alias vim=/bin/nvim
 #alias ffmpeg=/bin/ffmpeg
 alias htop=btop
+alias poweroff="python  ~/python/shutdown-check/shutdown-check/__main__.py"
 alias ls="lsd"
-alias cat="bat"
+alias cat="bat  --paging=always --pager='less -R'"
 figlet -ctf  ANSIShadow "hello" | lolcat
 alias apt="sudo nala"
 alias code=codium
