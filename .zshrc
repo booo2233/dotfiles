@@ -10,6 +10,7 @@ alias cat="bat  --paging=always --pager='less -R'"
 figlet -ctf  ANSIShadow "hello" | lolcat
 alias apt="sudo nala"
 alias code=codium
+alias ffmpeg="/bin/ffmpeg"
 alias fbc='codium $(fzf -m --preview="bat --color=always {}")'      
 alias fbv='/bin/nvim $(fzf -m --preview="bat --color=always {}")'
 bat() {
