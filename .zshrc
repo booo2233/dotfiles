@@ -163,3 +163,6 @@ eval "$(starship init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
+autoload bashcompinit
+bashcompinit
+source "/home/daniel/.local/share/bash-completion/completions/appman"
