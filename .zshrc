@@ -138,7 +138,7 @@ alias vim=/bin/nvim
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Load zsh-syntax-highlighting
-#source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Enable auto-completion
 autoload -Uz compinit
