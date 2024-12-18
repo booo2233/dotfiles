@@ -10,7 +10,6 @@ alias cat="bat  --paging=always --pager='less -R'"
 figlet -ctf  ANSIShadow "hello" | lolcat
 alias apt="sudo nala"
 alias code=codium
-alias ffmpeg="/bin/ffmpeg"
 alias fbc='codium $(fzf -m --preview="bat --color=always {}")'      
 alias fbv='/bin/nvim $(fzf -m --preview="bat --color=always {}")'
 bat() {
@@ -139,7 +138,7 @@ alias vim=/bin/nvim
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Load zsh-syntax-highlighting
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Enable auto-completion
 autoload -Uz compinit
