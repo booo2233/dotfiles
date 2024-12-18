@@ -1,22 +1,36 @@
-export PATH=$PATH:/media/linux_drvie/pip-env/bin
 export PATH=$PATH:~/.pyenv/versions/3.13t-dev/bin 
 export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
 alias vim=/bin/nvim
 #alias ffmpeg=/bin/ffmpeg
 alias htop=btop
-alias poweroff="python  ~/python/shutdown-check/shutdown-check/__main__.py"
 alias ls="lsd"
 alias cat="bat  --paging=always --pager='less -R'"
 figlet -ctf  ANSIShadow "hello" | lolcat
-alias apt="sudo nala"
 alias code=codium
 alias fbc='codium $(fzf -m --preview="bat --color=always {}")'      
 alias fbv='/bin/nvim $(fzf -m --preview="bat --color=always {}")'
-bat() {
-    BAT_PAGER='less-rs /dev/stdin' command bat --terminal-width="$(($COLUMNS - 4))" "$@"
-    return $?
-}
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Unset existing alias for 'apt' if it exists
+unalias apt 2>/dev/null
+
+# Define the 'apt' function
+apt() { 
+  command nala "$@"
+}
+
+# Unset existing alias for 'sudo' if it exists
+unalias sudo 2>/dev/null
+
+# Define the 'sudo' function
+sudo() {
+  if [[ "$1" == "apt" ]]; then
+    shift
+    command sudo nala "$@"
+  else
+    command sudo "$@"
+  fi
+}
+
 fpath=(/home/daniel/zsh-completions/src/ $fpath)
 alias neofetch='fastfetch'
 export PYENV_ROOT="$HOME/.pyenv"
@@ -34,7 +48,6 @@ source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -102,7 +115,6 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-alias vim=/bin/nvim
 #alias apt="sudo nala"
 # User configuration
 
