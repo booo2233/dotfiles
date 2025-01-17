@@ -1,4 +1,1 @@
 --theme="Catppuccin Mocha"
---color=always
---paging=always --pager="less -R"
-# Show line numbers, Git modifications and file header (but no grid)

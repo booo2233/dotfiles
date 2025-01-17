@@ -31,6 +31,24 @@ sudo() {
   fi
 }
 
+# Set the history file path
+HISTFILE=~/.zsh_history
+
+# Number of lines to keep in history file
+HISTSIZE=10000
+SAVEHIST=10000
+
+# Share history between sessions
+setopt SHARE_HISTORY
+
+# Append to history instead of overwriting
+setopt APPEND_HISTORY
+
+# Avoid duplicate entries
+setopt HIST_IGNORE_DUPS
+setopt HIST_FIND_NO_DUPS
+
+
 fpath=(/home/daniel/zsh-completions/src/ $fpath)
 alias neofetch='fastfetch'
 export PYENV_ROOT="$HOME/.pyenv"
