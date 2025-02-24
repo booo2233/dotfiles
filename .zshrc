@@ -5,8 +5,8 @@ alias vim=/bin/nvim
 alias htop=btop
 alias ls="lsd"
 alias cat="bat  --paging=always --pager='less -R'"
-figlet -ctf  ANSIShadow "hello" | lolcat
 alias code=codium
+fastfetch
 alias fbc='codium $(fzf -m --preview="bat --color=always {}")'      
 alias fbv='/bin/nvim $(fzf -m --preview="bat --color=always {}")'
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -195,3 +195,4 @@ fpath+=~/.zfunc; autoload -Uz compinit; compinit
 autoload bashcompinit
 bashcompinit
 source "/home/daniel/.local/share/bash-completion/completions/appman"
+source <(fzf --zsh)
