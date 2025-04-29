@@ -12,7 +12,6 @@ alias fbv='/bin/nvim $(fzf -m --preview="bat --color=always {}")'
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Unset existing alias for 'apt' if it exists
 unalias apt 2>/dev/null
-
 # Define the 'apt' function
 apt() { 
   command nala "$@"
