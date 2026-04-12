@@ -165,10 +165,8 @@ plugins=(git)
 #u source ~/powerlevel10k/powerlevel10k.zsh-theme
 # Load zsh-autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 # Load zsh-syntax-highlighting
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Enable auto-completion
 autoload -Uz compinit
 compinit
@@ -195,3 +193,4 @@ autoload bashcompinit
 bashcompinit
 source "/home/daniel/.local/share/bash-completion/completions/appman"
 source <(fzf --zsh)
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
