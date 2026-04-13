@@ -164,9 +164,10 @@ plugins=(git)
 #u source ~/powerlevel10k/powerlevel10k.zsh-theme
 #u source ~/powerlevel10k/powerlevel10k.zsh-theme
 # Load zsh-autosuggestions
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Load zsh-syntax-highlighting
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/fzf/key-bindings.zsh
 # Enable auto-completion
 autoload -Uz compinit
 compinit
@@ -191,6 +192,4 @@ eval "$(starship init zsh)"
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
 autoload bashcompinit
 bashcompinit
-source "/home/daniel/.local/share/bash-completion/completions/appman"
 source <(fzf --zsh)
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh

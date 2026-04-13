@@ -1,0 +1,151 @@
+@import "mocha.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 16px;
+    min-height: 0;
+    font-weight: bold;
+
+}
+
+window#waybar {
+    background: transparent;
+    background: none;
+    color: @overlay0;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+}
+
+#window {
+    margin: 8px;
+    padding-left: 8;
+    padding-right: 8;
+}
+
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 20px;
+    padding: 0 30px;
+    color: #000;
+    background-color: @rosewater;
+}
+
+button:hover {
+    background: inherit;
+    background-color: @rosewater;
+    color: @mauve;
+    border-top: 2px solid @mauve;
+
+}
+
+#workspaces button {
+    padding: 0 30px;
+    border-radius: 20px;
+
+}
+
+#workspaces button.focused {
+    background-color: @rosewater;
+    border-top: 2px solid @rosewater;
+
+}
+
+#workspaces button.active {
+    background-color: @rosewater;
+    border-top: 3px solid @mauve;
+    color: #414559;
+
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#backlight #pulseaudio,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#wireplumber,
+#tray,
+#network,
+#mode,
+#scratchpad {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 4px;
+    padding: 4px;
+}
+
+#clock {
+    color: @maroon;
+
+}
+
+#clock.date {
+    color: @mauve;
+    border-bottom: 2px solid @mauve;
+}
+
+#backlight {
+    color: @peach;
+    border: 2px solid @peach;
+    border-radius: 20px;
+    padding: 4px 8px 4px 8px;
+
+}
+
+#pulseaudio {
+    color: @blue;
+    border: 2px solid @blue;
+    border-radius: 20px;
+    padding: 4px 8px 4px 8px;
+}
+
+#network {
+    margin: 0px;
+    color: @yellow;
+    border: 2px solid @yellow;
+    border-radius: 20px;
+    padding: 4px 8px 4px 8px;
+
+}
+
+#idle_inhibitor {
+    margin-right: 12px;
+    color: #7cb342;
+}
+
+#idle_inhibitor.activated {
+    color: @red;
+}
+
+#battery {
+    color: @green;
+    border: 2px solid @green;
+    border-radius: 20px;
+    padding: 4px 8px 4px 8px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left>widget:first-child>#workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right>widget:last-child>#workspaces {
+    margin-right: 0;
+}
+
+#custom-vpn {
+    color: @lavender;
+    border-radius: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
