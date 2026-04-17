@@ -20,15 +20,6 @@ apt() {
 # Unset existing alias for 'sudo' if it exists
 unalias sudo 2>/dev/null
 
-# Define the 'sudo' function
-sudo() {
-  if [[ "$1" == "apt" ]]; then
-    shift
-    command sudo nala "$@"
-  else
-    command sudo "$@"
-  fi
-}
 
 # Set the history file path
 HISTFILE=~/.zsh_history

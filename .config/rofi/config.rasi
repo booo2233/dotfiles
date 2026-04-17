@@ -1,67 +1,82 @@
 configuration {
-  font: "mono 12";
+  font: "JetBrainsMono Nerd Font Mono 12";
+  show-icons: true;
+  display-drun: "";
+  display-emoji: "😀";
+  display-calc: "";
+  disable-history: false;
+  hide-scrollbar: true;
+
+
   timeout {
-      action: "kb-cancel";
-      delay:  0;
+    action: "kb-cancel";
+    delay: 0;
   }
+
   filebrowser {
-      directories-first: true;
-      sorting-method:    "name";
+    directories-first: true;
+    sorting-method: "name";
   }
+
+  modes: "drun,calc,emoji";
 }
 
 * {
   rosewater: #f5e0dc;
-  flamingo:  #f2cdcd;
-  pink:      #f5c2e7;
-  mauve:     #cba6f7;
-  red:       #f38ba8;
-  maroon:    #eba0ac;
-  peach:     #fab387;
-  yellow:    #f9e2af;
-  green:     #a6e3a1;
-  teal:      #94e2d5;
-  sky:       #89dceb;
-  sapphire:  #74c7ec;
-  blue:      #89b4fa;
-  lavender:  #b4befe;
-  text:      #cdd6f4;
-  subtext1:  #bac2de;
-  subtext0:  #a6adc8;
-  overlay2:  #9399b2;
-  overlay1:  #7f849c;
-  overlay0:  #6c7086;
-  surface2:  #585b70;
-  surface1:  #45475a;
-  surface0:  #313244;
-  base:      #1e1e2e;
-  mantle:    #181825;
-  crust:     #11111b;
+  flamingo: #f2cdcd;
+  pink: #f5c2e7;
+  mauve: #cba6f7;
+  red: #f38ba8;
+  maroon: #eba0ac;
+  peach: #fab387;
+  yellow: #f9e2af;
+  green: #a6e3a1;
+  teal: #94e2d5;
+  sky: #89dceb;
+  sapphire: #74c7ec;
+  blue: #89b4fa;
+  lavender: #b4befe;
+  text: #cdd6f4;
+  subtext1: #bac2de;
+  subtext0: #a6adc8;
+  overlay2: #9399b2;
+  overlay1: #7f849c;
+  overlay0: #6c7086;
+  surface2: #585b70;
+  surface1: #45475a;
+  surface0: #313244;
+  base: #1e1e2e;
+  mantle: #181825;
+  crust: #11111b;
 
   background-color: transparent;
-  text-color:       @text;
+  text-color: @text;
 }
 
 window {
   background-color: @base;
-  border:           2px;
-  border-color:     @mauve;
-  border-radius:    8px;
-  width:            600px;
+  border: 2px;
+  border-color: @mauve;
+  border-radius: 20px;
+  width: 800px;
 }
 
 mainbox {
+  margin: 3px;
   background-color: @base;
-  padding:          12px;
-  spacing:          8px;
+  padding: 12px;
+  spacing: 0px;
+  children: [ inputbar, listview];
 }
 
+
 inputbar {
+
   background-color: @surface0;
-  border-radius:    6px;
-  padding:          8px 12px;
-  spacing:          8px;
-  children:         [ prompt, entry ];
+  border-radius: 20px;
+  padding: 12px 12px;
+  spacing: 8px;
+  children: [ prompt, entry];
 }
 
 prompt {
@@ -69,38 +84,43 @@ prompt {
 }
 
 entry {
-  text-color:        @text;
-  placeholder:       "Search...";
+  text-color: @text;
+  placeholder: "Search...";
   placeholder-color: @overlay0;
 }
 
 listview {
+  border: 0px;
   background-color: transparent;
-  spacing:          4px;
-  padding:          4px 0;
-  lines:            8;
+  spacing: 4px;
+  padding: 4px 0;
+  lines: 8;
+  scrollbar: false;
 }
 
 element {
   background-color: transparent;
-  border-radius:    6px;
-  padding:          8px 12px;
-  spacing:          8px;
+  border-radius: 12px;
+  padding: 13px 30px;
+  spacing: 8px;
 }
 
 element normal.normal {
   background-color: transparent;
-  text-color:       @text;
+  text-color: @text;
 }
 
 element selected.normal {
   background-color: @surface1;
-  text-color:       @mauve;
+  text-color: @mauve;
+  border: 2px;
+  border-color: @mauve;
+  border-radius: 12px;
 }
 
 element alternate.normal {
   background-color: transparent;
-  text-color:       @subtext0;
+  text-color: @subtext0;
 }
 
 element-icon {
